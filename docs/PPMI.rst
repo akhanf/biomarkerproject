@@ -1,99 +1,18 @@
 ============
-Installation
+PPMI data
 ============
 
-Prepdwi is a BIDS App, and is thus built into a Docker/Singularity container. Our current build process uses Docker to build and test with continuous integration, Docker Hub to store the latest version and each release, and copies of these containers are also stored on Singularity Hub. The `latest` tag in both Docker Hub and Singularity Hub is the latest development version of the pipeline, with the releases tagged with v0.* (latest release is v0.0.8 as of September 4, 2018). 
+The Parkinson's Progression Markers Initiative (PPMI) is a global research effort aimed at identifying biomarkers for Parkinson's disease. PPMI is sponsored by the Michael J. Fox Foundation for Parkinson's Research and involves collaboration among academic, industry, and nonprofit organizations. The initiative seeks to accelerate the development of new treatments for Parkinson's by identifying biomarkers that can help predict and track disease progression. PPMI includes a number of studies that aim to collect data on various types of biomarkers, including imaging biomarkers, genetic biomarkers, and biofluid biomarkers. By sharing data and resources across the scientific community, PPMI hopes to better understand the underlying biology of Parkinson's disease and identify new approaches to diagnosis and treatment. The ultimate goal of PPMI is to improve the lives of individuals living with Parkinson's by accelerating the development of more effective therapies.
 
-https://hub.docker.com/r/khanlab/prepdwi/
-https://singularity-hub.org/collections/392 
-
-You can run prepdwi using either Docker or Singularity. We recommend Singularity if you are running the pipeline on a shared compute system. For instructions on running BIDS Apps with Docker, please see http://bids-apps.neuroimaging.io
-
-Install Singularity
+Official Website
 ########
+https://www.ppmi-info.org/
 
-To run a singularity image, first you need to have singularity installed in your local computer or server. To install singularity, please follow the instructions in the singularity website.
-
-https://www.sylabs.io/guides/2.5.1/user-guide/
-
-Running prepdwi
+Downloading Data
 ########
-
-Once Singularity set up on your computer you can start running prepdwi. The following is an example of running prepdwi on a BIDS dataset.
-
-Example
-*******
-
-For this example, let's assume that your downloaded singularity image is saved in the path home/singularity/Singularity.0.07g and your BIDS data is saved in home/data/bids. you can rename the image name from Singularity.0.07g to prepdwi_7g for simplicity
-
-The data in the "bids" folder should be in the BIDS format. For more details about BIDS format, read:
-http://bids.neuroimaging.io/
-
-participant level analysis
----------------------------
-
-In prepdwi, there are several levels of analysis named as participant, group and participant2. To learn more about these analysis levels and optional arguments/flags, read (put a link here)
-
-The basic structure for running prepdwi is:
-
-.. code-block:: bash
-
-	singularity run <path_to_prepdwi_image> <bids_dir> <output_dir> {participant,group,participant2} <optional arguments>
-
-For our example create a directory to save the output inside the project directory as "derrivatives".
-
-At the command line type::
-
-    singularity run home/singularity/prepdwi_version.img home/project/bids home/project/derrivatives participant 
-
-Or, if you have access to Khanlab Graham server and have `neuroglia helpers <https://github.com/khanlab/neuroglia-helpers>`_. installed you can submit it as a job.
-
-.. code-block:: bash
-
-    bidsBatch prepdwi_version <bids_dir> <output_dir> participant
-
-This will run the participant level analysis for all the subjects in the bids folder and will save the resultst to the derrivatives folder. This code is running the `FSL BEDPOSTX <https://fsl.fmrib.ox.ac.uk/fsl/fslwiki/FDT/UserGuide#BEDPOSTX>`_. which takes a long time and we highly recommend using highspeed computer server to run this code. (Typical time is 24 hours in Sharcnet)
-Once the process is completed, you will see a "work" folder and a "prepdwi" folder inside the "derrivatives" directory. To learn what to expect inside thses folders, read (link to the cookbook)
+https://github.com/khanlab/ppmi-bids-smk
 
 
-group level analysis
----------------------------
-
-After running the participant level analysis, you can run a group level analysis to see how good the registarions are. To know more about the group level analysis, read (link)
-
-
-At the command line type::
-
-    singularity run home/singularity/prepdwi_version.img home/project/bids home/project/derrivatives group 
-
-Or, for Khanlab members
-
-.. code-block:: bash
-
-	bidsBatch prepdwi_version <bids_dir> <output_dir> group
-
-IMPORTANT: Makesure that the ourput directory is the same as the one for "participant" level.
-
-Once the group level analysis is completed, you will see a new folder inside the "derrivatives" directory called "reports". There you will see a list of html files for each subject which shows the qulaity of the registration at each process. The failed registrations can be identified if the red contour plots are not overlapping with the template image. For the registration failed cases, you can re-run prepdwi participant level using --reg_init_participant flag which is explained in the (link to cookbook).
-
-participant2 level analysis
----------------------------
-
-If the participant1 level is completed you can run participant2 level analysis on the data. To know more about participant2 level, read (link)
-
-At the command line type::
-
-    singularity run home/singularity/prepdwi_version.img home/project/bids home/project/derrivatives participant2 
-
-Or, for Khanlab members
-
-.. code-block:: bash
-
-	bidsBatch prepdwi_version <bids_dir> <output_dir> participant2
-
-IMPORTANT: Makesure that the ourput directory is the same as the one for "participant" level.
-
-Once the participant2 level analysis is completed, you will see a new folder inside the "derrivatives" directory called "bedpost". Also you will see several csv files for connectivity matrix and FA matrices.
 
 
   .. index::
