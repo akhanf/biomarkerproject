@@ -6,6 +6,8 @@ Welcome to The PD Biomarker Project documentation!
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
+   
+   PPMI
 
    getting-started
    data-requirements
