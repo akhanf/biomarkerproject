@@ -16,7 +16,7 @@ https://github.com/khanlab/ppmi-bids-smk
 Data Availability
 ########
 +--------------+----------------------+--------------------------------+-------------------+-------------------+
-| Group        | Number of Subjects    | Subjects with both T1 and DWI | Longitudinal Data | Format            |
+| Group        | Number of Subjects   | Subjects with both T1 and DWI  | Longitudinal Data | Format            |
 +==============+======================+================================+===================+===================+
 | Control      | 20                   | 18                             | Yes               | BIDS              |
 +--------------+----------------------+--------------------------------+-------------------+-------------------+
@@ -25,7 +25,49 @@ Data Availability
 | Prodromal    | 10                   | 9                              | No                | BIDS              |
 +--------------+----------------------+--------------------------------+-------------------+-------------------+
 
+Downloaded data can be found at:
+
+.. code-block:: bash
+
+	~/projects/ctb-akhanf/ext-bids/ppmi/ppmi-bids-smk/bids_workflow/subj_bids
+
+Ongoing Projects
+====================
+
+Detecting early stage Parkinson's Disease using cortico-striatal structural connectivity
+---------
+
+- Contact person: Dimuthu Hemachandra (dhemacha@uwo.ca)
+- GitHub: https://github.com/DimuthuHemachandra/PPMI_classifier
+- Publications: 
+    - 
+
+This project is aiming to use feature extracted from striatum and VTASNc regions to train a model to classify patients with early PD from health controls.
+
+Tracking Disease Progression of PD
+---------
+
+- Contact person: Dimuthu Hemachandra (dhemacha@uwo.ca)
+- GitHub: 
+- Publications: 
+    - 
+
+Description of projec goes here
+
+Prodromal Project
+---------
+
+- Contact person: Erind Alushaj (alushaje@gmail.com)
+- GitHub: 
+- Publications: 
+    - 
+
+Description of projec goes here
 
 
+
+
+Future Projects
+====================
   .. index::
         pair: Syntax; TOC Tree
