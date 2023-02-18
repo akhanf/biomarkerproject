@@ -32,7 +32,7 @@ Downloaded data can be found at:
 	~/projects/ctb-akhanf/ext-bids/ppmi/ppmi-bids-smk/bids_workflow/subj_bids
 
 Ongoing Projects
-====================
+########
 
 Detecting early stage Parkinson's Disease using cortico-striatal structural connectivity
 ---------
