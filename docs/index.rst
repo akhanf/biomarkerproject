@@ -8,6 +8,8 @@ Welcome to The PD Biomarker Project documentation!
    :caption: Contents:
    
    PPMI
+   CCNA
+   ONDRI
 
    getting-started
    data-requirements
