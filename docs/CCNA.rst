@@ -1,17 +1,15 @@
 ============
-ONDRI data
+CCNA data
 ============
 
-The Ontario Neurodegenerative Research Initiative (ONDRI) is a 3-year study that collected comprehensive data, including 3T structural MRI, from patients with different neurodegenerative diseases such as Alzheimer's disease, Parkinson's disease, and cerebrovascular disease. The study used a semi-automated MRI processing pipeline to effectively quantify regional brain tissue volumes and neurovascular marker data, which can be accessed publicly. This paper provides a conceptual overview of the ONDRI neuroimaging pipeline, which was designed to address the challenges posed by the heterogeneity of the patient population.
+The Canadian Consortium on Neurodegeneration in Aging (CCNA) is a collaborative research initiative that brings together leading Canadian researchers, clinicians, and other professionals to better understand the causes of neurodegenerative diseases in aging and develop effective treatments. CCNA is focused on a broad range of neurodegenerative diseases, including Alzheimer's disease, Parkinson's disease, and frontotemporal dementia. Their website provides information about their research activities, training and education opportunities, and events. It also offers resources and tools for patients, families, and caregivers.
 
 Official Website
 ########
 
-https://ondri.ca/
+https://ccna-ccnv.ca/about-us/
 
-Main paper:
 
-https://www.frontiersin.org/articles/10.3389/fneur.2020.00847/full
 
 Downloading Data
 ########
