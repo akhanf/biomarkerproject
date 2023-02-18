@@ -39,7 +39,7 @@ Downloaded data can be found at:
 Ongoing Projects
 ########
 
-Detecting early stage Parkinson's Disease using cortico-striatal structural connectivity
+Name of the Project
 ---------
 
 - Contact person: 
